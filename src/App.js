@@ -53,33 +53,35 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <h1>Trouve ta recette parfaite</h1>
-        <p className="subtitle">Explore des plats délicieux</p>
+      <h1>Find your perfect recipe</h1>
+<p className="subtitle">Explore delicious dishes</p>
+
       </header>
       <form onSubmit={e => e.preventDefault()} className="search-form">
         <input
           type="text"
           value={search}
           onChange={e => setSearch(e.target.value)}
-          placeholder="Recherche.."
+         placeholder="Search..."
           className="search-input"
         />
       </form>
       {!search && !loading && (
         <div className="welcome-message">
-          <p>Tape un plat ou un ingrédient <em>en anglais</em> pour commencer  !</p>
-          <p>Essaie par exemple : <em>pizza</em>, <em>curry</em> ou <em>chocolat</em>.</p>
+          <p>Type a dish or an ingredient to get started!</p>
+          <p>Try for example: <em>pizza</em>, <em>curry</em>, or <em>chocolate</em>.</p>
+
         </div>
       )}
       <ul id="result">
-        {loading && <h2>Chargement...</h2>}
-        {!loading && meals.length === 0 && search && <h2>Aucun résultat trouvé</h2>}
+        {loading && <h2>Loading...</h2>}
+        {!loading && meals.length === 0 && search && <h2>No results found</h2>}
         {!loading && meals.slice(0, 12).map(meal => (
           <li key={meal.idMeal} className="card">
             <h2>{escapeHTML(meal.strMeal)}</h2>
             <p>{escapeHTML(meal.strArea)}</p>
             <img src={meal.strMealThumb} alt={`Photo de ${escapeHTML(meal.strMeal)}`} loading="lazy" />
-            <h3>Ingrédients :</h3>
+            <h3>Ingredients :</h3>
             <ul>
               {getIngredientsAndMeasures(meal).map((item, index) => (
                 <li key={index}>

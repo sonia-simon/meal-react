@@ -1,4 +1,3 @@
-/* Réinitialisation de base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +5,6 @@
   font-family: "Inter", sans-serif;
 }
 
-/* Variables CSS */
 :root {
   --accent-color: #ff6f61;
   --text-primary: #1a1a1a;
@@ -27,11 +25,11 @@
 }
 
 header {
-  margin-bottom: 2rem; /* Unités relatives pour fluidité */
+  margin-bottom: 2rem; 
 }
 
 h1 {
-  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Taille fluide entre 1.8rem et 2.5rem */
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   color: var(--accent-color);
   font-weight: 700;
 }
@@ -43,15 +41,15 @@ h1 {
 }
 
 .search-form {
-  width: 90%; /* Base responsive */
-  max-width: 1000px; /* Limite raisonnable sur grand écran */
+  width: 90%; 
+  max-width: 1000px; 
   margin: 0 auto 2rem auto;
 }
 
 .search-input {
   width: 100%;
-  padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 20px); /* Padding fluide */
-  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Taille de texte adaptable */
+  padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 20px);
+  font-size: clamp(1rem, 2.5vw, 1.2rem); 
   border-radius: 12px;
   border: 2px solid var(--accent-color);
   box-shadow: var(--shadow);
@@ -59,9 +57,10 @@ h1 {
 }
 
 .search-input:focus {
-  border-color: darken(var(--accent-color), 10%);
+  border-color: #e65a50; 
   box-shadow: var(--shadow-hover);
 }
+
 
 .welcome-message {
   margin: 1.5rem 0;
@@ -139,24 +138,24 @@ h1 {
   font-weight: 600;
 }
 
-/* Media Queries pour ajustements spécifiques */
+
 @media (max-width: 768px) {
   .search-form {
-    width: 95%; /* Plus large sur mobile */
+    width: 95%; 
   }
 
   #result {
-    grid-template-columns: 1fr; /* Une colonne sur petits écrans */
+    grid-template-columns: 1fr; 
   }
 
   .card img {
-    height: 150px; /* Réduit la hauteur des images sur mobile */
+    height: 150px; 
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.5rem; /* Plus petit sur très petits écrans */
+    font-size: 1.5rem; 
   }
 
   .subtitle {
@@ -164,6 +163,6 @@ h1 {
   }
 
   .search-input {
-    padding: 8px 12px; /* Plus compact */
+    padding: 8px 12px; 
   }
 }
