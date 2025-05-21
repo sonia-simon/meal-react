@@ -25,3 +25,5 @@ Structuring a React project
 
 Designing a clean and user-friendly interface
 
+![meal](https://github.com/user-attachments/assets/ff9f6f09-0d47-4b30-870d-adce42d9c8a0)
+![meal app2](https://github.com/user-attachments/assets/66abffb4-c0e6-49fa-ba08-733772ee4d88)
