@@ -1,7 +1,6 @@
 Project: Meal App (React)
 A small app to search for recipes using a dish or ingredient. It fetches data from an API and displays results as clean, responsive cards.
-
-🔧 What it does:
+What it does:
 Lets you search for a meal using a text input
 
 Connects to an external API to get recipe data
